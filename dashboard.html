@@ -1,19 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link
       rel="shortcut icon"
       href="./assets/images/logo/favicon.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
     <title>Dashboard - Cafe Street</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img
+          src="./assets/images/logo/Logo.svg"
+          alt="an image showing the website logo"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li class="nav-link underline-effect">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./products.html">Our Products</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./about.html">About us</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <div class="greeting">
+          <p>Hi <span>Ahmed Elsifi</span></p>
+        </div>
+        <div class="cart">
+          <a href="./cart.html" class="underline-effect"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <span>0</span>
+        </div>
+      </div>
+    </header>
 
-</body>
+    <div class="container">
+      <section class="dashboard-hero">
+        <div class="dashboard-hero-content">
+          <h1>Admin <span>dashboard</span></h1>
+          <p>Manage your products, users, and orders</p>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stats-cards">
+          <div class="stat-card">
+            <div class="stat-icon products-icon">
+              <i class="fa-solid fa-box"></i>
+            </div>
+            <div class="stat-info">
+              <h3>12</h3>
+              <p>Total Products</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon users-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <h3>248</h3>
+              <p>Total Users</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon orders-icon">
+              <i class="fa-solid fa-shopping-bag"></i>
+            </div>
+            <div class="stat-info">
+              <h3>1,024</h3>
+              <p>Total Orders</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-header">
+          <h2>Product <span>management</span></h2>
+          <button class="add-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add Product
+          </button>
+        </div>
+        <div class="section-controls">
+          <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search products..." />
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/products/Cappuccino Supreme.png"
+                    alt="Cappuccino Supreme"
+                  />
+                </td>
+                <td>Cappuccino Supreme</td>
+                <td><span class="category-tag hot">Hot Coffee</span></td>
+                <td>$4.99</td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/products/Caramel Macchiato.png"
+                    alt="Caramel Macchiato"
+                  />
+                </td>
+                <td>Caramel Macchiato</td>
+                <td><span class="category-tag hot">Hot Coffee</span></td>
+                <td>$5.49</td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/products/Espresso Doppio.png"
+                    alt="Espresso Doppio"
+                  />
+                </td>
+                <td>Espresso Doppio</td>
+                <td><span class="category-tag hot">Hot Coffee</span></td>
+                <td>$3.99</td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/products/Nitro Cold Brew.png"
+                    alt="Nitro Cold Brew"
+                  />
+                </td>
+                <td>Nitro Cold Brew</td>
+                <td><span class="category-tag cold">Cold Coffee</span></td>
+                <td>$5.49</td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/products/Waffle Ice Cream.png"
+                    alt="Waffle Ice Cream"
+                  />
+                </td>
+                <td>Waffle Ice Cream</td>
+                <td><span class="category-tag food">Food</span></td>
+                <td>$7.49</td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-header">
+          <h2>User <span>management</span></h2>
+          <button class="add-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add User
+          </button>
+        </div>
+        <div class="section-controls">
+          <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search users..." />
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Avatar</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </td>
+                <td>Ahmed Elsifi</td>
+                <td>ahmed@cafestreet.com</td>
+                <td><span class="role-tag admin">Admin</span></td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </td>
+                <td>Sara Hassan</td>
+                <td>sara@cafestreet.com</td>
+                <td><span class="role-tag manager">Manager</span></td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </td>
+                <td>Omar Khalid</td>
+                <td>omar@cafestreet.com</td>
+                <td><span class="role-tag barista">Barista</span></td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </td>
+                <td>Naura Ali</td>
+                <td>naura@cafestreet.com</td>
+                <td><span class="role-tag customer">Customer</span></td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </td>
+                <td>John Smith</td>
+                <td>john@cafestreet.com</td>
+                <td><span class="role-tag customer">Customer</span></td>
+                <td class="actions">
+                  <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./assets/images/logo/Logo white.svg" alt="" />
+          <p>
+            Enjoy your coffee before your activity - boosting productivity and
+            mood worldwide.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact & Hours</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>7:00 AM - 9:00 PM daily</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@cafestreet.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (555) 234-CAFE</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-pin"></i>
+              <span>42 Espresso Way, Roast Quarter</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>
+            Get brew guides, secret bean drops, and 15% off your first bag.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for
+          productivity and mood.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

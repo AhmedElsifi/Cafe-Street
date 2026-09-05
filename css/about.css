@@ -27,7 +27,7 @@
   margin-top: 16px;
 }
 
-.about-story {
+.about-company {
   margin: 80px 0;
   display: flex;
   justify-content: space-between;
@@ -35,39 +35,146 @@
   gap: 48px;
 }
 
-.about-story-image {
+.about-company-image {
   width: 500px;
 }
 
-.about-story-image img {
-  width: 100%;
-  border-radius: 16px;
+.about-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
 }
 
-.about-story-content {
+.about-collage img {
+  width: 100%;
+  height: 244px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.collage-img-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.collage-img-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.collage-img-3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.collage-img-4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.about-company-content {
   width: 500px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.about-story-content h2 {
+.about-company-content h2 {
   font-size: 36px;
   font-weight: 700;
   color: #2c1810;
 }
 
-.about-story-content h2 span {
+.about-company-content h2 span {
   text-decoration: underline;
   text-decoration-color: #e37f30;
   text-decoration-thickness: 4px;
   text-underline-offset: 4px;
 }
 
-.about-story-content p {
+.about-company-content p {
   font-size: 16px;
   color: #7e7d7a;
   line-height: 1.8;
+}
+
+.about-vision-mission {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.about-vision-mission-header {
+  margin-bottom: 48px;
+}
+
+.about-vision-mission-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-vision-mission-header h2 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.about-vision-mission-header p {
+  font-size: 16px;
+  color: #7e7d7a;
+  margin-top: 12px;
+}
+
+.about-vision-mission-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.about-vision-card,
+.about-mission-card {
+  width: 480px;
+  padding: 32px 24px;
+  background-color: #f9f5f0;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition-duration: 0.5s;
+}
+
+.about-vision-card:hover,
+.about-mission-card:hover {
+  scale: 1.03;
+}
+
+.about-vision-icon {
+  width: 72px;
+  height: 72px;
+  background-color: #e37f30;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.about-vision-card h3,
+.about-mission-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-vision-card p,
+.about-mission-card p {
+  font-size: 14px;
+  color: #7e7d7a;
+  line-height: 1.7;
 }
 
 .about-values {
@@ -143,93 +250,111 @@
   color: #7e7d7a;
 }
 
-.about-team {
+.about-contact {
   margin: 80px 0;
-  text-align: center;
 }
 
-.about-team-header {
+.about-contact-header {
+  text-align: center;
   margin-bottom: 48px;
 }
 
-.about-team-header h2 {
+.about-contact-header h2 {
   font-size: 36px;
   font-weight: 700;
   color: #2c1810;
 }
 
-.about-team-header h2 span {
+.about-contact-header h2 span {
   text-decoration: underline;
   text-decoration-color: #e37f30;
   text-decoration-thickness: 4px;
   text-underline-offset: 4px;
 }
 
-.about-team-header p {
+.about-contact-header p {
   font-size: 16px;
   color: #7e7d7a;
   margin-top: 12px;
 }
 
-.about-team-cards {
+.about-contact-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.about-contact-info {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
-.about-team-card {
-  width: 200px;
-  padding: 32px 24px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 14px 0px rgb(44, 24, 16, 0.08);
+.about-contact-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  transition-duration: 0.5s;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.about-team-card:hover {
-  scale: 1.05;
-}
-
-.about-team-avatar {
-  width: 80px;
-  height: 80px;
-  background-color: #f3f4f6;
+.about-contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: #e37f30;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #7e7d7a;
-  font-size: 32px;
+  color: #ffffff;
+  font-size: 18px;
 }
 
-.about-team-card h4 {
-  font-size: 18px;
+.about-contact-item h4 {
+  font-size: 16px;
   font-weight: 700;
   color: #2c1810;
+  margin-bottom: 4px;
 }
 
-.about-team-card p {
+.about-contact-item p {
   font-size: 14px;
   color: #7e7d7a;
 }
 
+.about-contact-map {
+  width: 500px;
+}
+
+.about-contact-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
 @media (max-width: 768px) {
-  .about-story {
+  .about-company,
+  .about-contact-content {
     flex-direction: column;
   }
 
-  .about-story-image,
-  .about-story-content {
+  .about-company-image,
+  .about-company-content,
+  .about-contact-info,
+  .about-contact-map {
     width: 100%;
   }
 
-  .about-values-cards,
-  .about-team-cards {
+  .about-vision-mission-cards,
+  .about-values-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-vision-card,
+  .about-mission-card {
+    width: 100%;
+    max-width: 480px;
   }
 }
