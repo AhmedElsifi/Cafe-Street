@@ -79,6 +79,16 @@ table {
   width: 100%;
 }
 
+::-moz-selection {
+  background-color: #e37f30;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #e37f30;
+  color: #ffffff;
+}
+
 /* ===== NAVBAR ===== */
 
 header {

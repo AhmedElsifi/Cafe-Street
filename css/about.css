@@ -1,0 +1,235 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.about-hero {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-hero-content h1 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.about-hero-content p {
+  font-size: 18px;
+  color: #7e7d7a;
+  margin-top: 16px;
+}
+
+.about-story {
+  margin: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.about-story-image {
+  width: 500px;
+}
+
+.about-story-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.about-story-content {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-story-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-story-content h2 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.about-story-content p {
+  font-size: 16px;
+  color: #7e7d7a;
+  line-height: 1.8;
+}
+
+.about-values {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.about-values-header {
+  margin-bottom: 48px;
+}
+
+.about-values-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-values-header h2 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.about-values-header p {
+  font-size: 16px;
+  color: #7e7d7a;
+  margin-top: 12px;
+}
+
+.about-values-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.about-value-card {
+  width: 300px;
+  padding: 32px 24px;
+  background-color: #f9f5f0;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition-duration: 0.5s;
+}
+
+.about-value-card:hover {
+  scale: 1.05;
+}
+
+.about-value-icon {
+  width: 72px;
+  height: 72px;
+  background-color: #e37f30;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.about-value-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-value-card p {
+  font-size: 14px;
+  color: #7e7d7a;
+}
+
+.about-team {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.about-team-header {
+  margin-bottom: 48px;
+}
+
+.about-team-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-team-header h2 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.about-team-header p {
+  font-size: 16px;
+  color: #7e7d7a;
+  margin-top: 12px;
+}
+
+.about-team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.about-team-card {
+  width: 200px;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 14px 0px rgb(44, 24, 16, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.5s;
+}
+
+.about-team-card:hover {
+  scale: 1.05;
+}
+
+.about-team-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7e7d7a;
+  font-size: 32px;
+}
+
+.about-team-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.about-team-card p {
+  font-size: 14px;
+  color: #7e7d7a;
+}
+
+@media (max-width: 768px) {
+  .about-story {
+    flex-direction: column;
+  }
+
+  .about-story-image,
+  .about-story-content {
+    width: 100%;
+  }
+
+  .about-values-cards,
+  .about-team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

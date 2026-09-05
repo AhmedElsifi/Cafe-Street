@@ -1,19 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link
       rel="shortcut icon"
       href="./assets/images/logo/favicon.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/about.css" />
     <title>About - Cafe Street</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img
+          src="./assets/images/logo/Logo.svg"
+          alt="an image showing the website logo"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li class="nav-link underline-effect">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./products.html">Our Products</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./about.html">About us</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <div class="greeting">
+          <p>Hi <span>Ahmed Elsifi</span></p>
+        </div>
+        <div class="cart">
+          <a href="./cart.html" class="underline-effect"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <span>0</span>
+        </div>
+      </div>
+    </header>
 
-</body>
+    <div class="container">
+      <section class="about-hero">
+        <div class="about-hero-content">
+          <h1>About <span>us</span></h1>
+          <p>
+            We are passionate about delivering the finest coffee experience
+            right to your doorstep.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-story">
+        <div class="about-story-image">
+          <img
+            src="./assets/images/hero/Hero main.png"
+            alt="Our coffee story"
+          />
+        </div>
+        <div class="about-story-content">
+          <h2>Our <span>story</span></h2>
+          <p>
+            Founded in 2024, Cafe Street started as a small passion project by
+            coffee enthusiasts who believed that everyone deserves access to
+            premium quality coffee. What began as a single coffee cart has
+            grown into a beloved brand trusted by thousands of customers
+            daily.
+          </p>
+          <p>
+            Our mission is simple: to bring the world's finest beans, sourced
+            sustainably from farms across the globe, directly to you. Every
+            cup we serve is crafted with precision, care, and a deep love for
+            the art of coffee making.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-values">
+        <div class="about-values-header">
+          <h2>Our <span>values</span></h2>
+          <p>What drives us every single day</p>
+        </div>
+        <div class="about-values-cards">
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>Sustainability</h3>
+            <p>
+              We source our beans from ethical farms that prioritize
+              environmental responsibility and fair trade practices.
+            </p>
+          </div>
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3>Quality</h3>
+            <p>
+              Every batch is carefully tested and roasted to perfection,
+              ensuring you get the best flavor in every sip.
+            </p>
+          </div>
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3>Speed</h3>
+            <p>
+              Our delivery network ensures your coffee arrives fresh and warm,
+              right when you need it most.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-team">
+        <div class="about-team-header">
+          <h2>Meet the <span>team</span></h2>
+          <p>The people behind your favorite coffee</p>
+        </div>
+        <div class="about-team-cards">
+          <div class="about-team-card">
+            <div class="about-team-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h4>Ahmed</h4>
+            <p>Founder & CEO</p>
+          </div>
+          <div class="about-team-card">
+            <div class="about-team-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h4>Sara</h4>
+            <p>Head Barista</p>
+          </div>
+          <div class="about-team-card">
+            <div class="about-team-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h4>Omar</h4>
+            <p>Operations Manager</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./assets/images/logo/Logo white.svg" alt="" />
+          <p>
+            Enjoy your coffee before your activity - boosting productivity and
+            mood worldwide.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact & Hours</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>7:00 AM - 9:00 PM daily</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@cafestreet.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (555) 234-CAFE</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-pin"></i>
+              <span>42 Espresso Way, Roast Quarter</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>
+            Get brew guides, secret bean drops, and 15% off your first bag.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for
+          productivity and mood.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
