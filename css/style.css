@@ -3,22 +3,22 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== BASE ===== */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    line-height: 1.5;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-rendering: optimizeSpeed;
 }
 
 img,
@@ -26,32 +26,288 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* EFFECTS */
+
+/* UNDERLINE EFFECT */
+
+.underline-effect {
+  position: relative;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e37f30;
+  transition: width 0.3s ease;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+}
+
+/* ===== NAVBAR ===== */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 26px 0px;
+  height: fit-content;
+  background-color: #f5ebdb;
+  position: sticky;
+  top: 0;
+}
+
+/* NAVLOGO */
+
+header > a > img {
+  width: 150px;
+}
+
+/* NAVLINKS */
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.greeting span {
+  color: #e37f30;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  background-color: #e37f30;
+  border-radius: 9999px;
+  top: -50%;
+  right: -50%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-brand {
+  width: 35%;
+}
+
+.footer-brand img {
+  margin-bottom: 16px;
+}
+
+.footer-brand h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  width: 15%;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-newsletter h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e37f30;
+}
+
+.footer-contact {
+  width: 25%;
+}
+
+.footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-contact i {
+  width: 16px;
+  color: #e37f30;
+}
+
+.footer-newsletter {
+  width: 25%;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #777;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #e37f30;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #d06a1f;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #777;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #e37f30;
 }
