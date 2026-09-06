@@ -35,14 +35,12 @@
           <li class="nav-link underline-effect">
             <a href="./about.html">About us</a>
           </li>
-          <li class="nav-link underline-effect">
-            <a href="./contact.html">Contact Us</a>
-          </li>
+
         </ul>
       </nav>
       <div class="controls">
-        <div class="greeting">
-          <p>Hi <span>Ahmed Elsifi</span></p>
+        <div id="auth-controls" class="greeting">
+          <a href="./login.html" class="login-btn">Login</a>
         </div>
         <div class="cart">
           <a href="./cart.html" class="underline-effect"
@@ -85,116 +83,7 @@
           </div>
         </div>
         <div class="carousel">
-          <div class="carousel-products">
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Hot</p>
-                <img
-                  src="assets/images/products/Cappuccino Supreme.png"
-                  alt="Cappuccino Supreme"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Cappuccino Supreme</h3>
-                  <h4>$4.99</h4>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Hot</p>
-                <img
-                  src="assets/images/products/Caramel Macchiato.png"
-                  alt="Caramel Macchiato"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Caramel Macchiato</h3>
-                  <h4>$5.49</h4>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Hot</p>
-                <img
-                  src="assets/images/products/Espresso Doppio.png"
-                  alt="Espresso Doppio"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Espresso Doppio</h3>
-                  <h4>$3.99</h4>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Hot</p>
-                <img
-                  src="assets/images/products/Hazelnut Latte.png"
-                  alt="Hazelnut Latte"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Hazelnut Latte</h3>
-                  <h4>$5.29</h4>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Cold</p>
-                <img
-                  src="assets/images/products/Nitro Cold Brew.png"
-                  alt="Nitro Cold Brew"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Nitro Cold Brew</h3>
-                  <h4>$5.49</h4>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-product">
-              <div class="carousel-product-image">
-                <p class="carousel-product-tag">Cold</p>
-                <img
-                  src="assets/images/products/Waffle Ice Cream.png"
-                  alt="Waffle Ice Cream"
-                />
-                <div class="carousel-product-add-to-cart-btn">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </div>
-              </div>
-              <div class="carousel-product-details">
-                <div class="carousel-product-details-header">
-                  <h3>Waffle Ice Cream</h3>
-                  <h4>$7.49</h4>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="carousel-products"></div>
         </div>
       </section>
       <section class="how-it-works">
@@ -238,10 +127,15 @@
             looking to boost your productivity or simply enjoy a quiet moment,
             we're here to serve you the best coffee experience.
           </p>
-          <a href="./about.html">Get your coffee <i class="fa-solid fa-cart-plus"></i></a>
+          <a href="./about.html"
+            >Get your coffee <i class="fa-solid fa-cart-plus"></i
+          ></a>
         </div>
         <div class="about-us-image">
-          <img src="./assets/images/hero/Hero main.png" alt="About Cafe Street" />
+          <img
+            src="./assets/images/hero/Hero main.png"
+            alt="About Cafe Street"
+          />
         </div>
       </section>
       <section class="promo-banner">
@@ -265,7 +159,10 @@
             <div class="testimonial-quote">
               <i class="fa-solid fa-quote-left"></i>
             </div>
-            <p class="testimonial-text">"The coffee here is absolutely amazing. I've never tasted anything better. The delivery was fast and the cup was still warm!"</p>
+            <p class="testimonial-text">
+              "The coffee here is absolutely amazing. I've never tasted anything
+              better. The delivery was fast and the cup was still warm!"
+            </p>
             <div class="testimonial-author">
               <h4>Naura</h4>
             </div>
@@ -274,7 +171,10 @@
             <div class="testimonial-quote">
               <i class="fa-solid fa-quote-left"></i>
             </div>
-            <p class="testimonial-text">"Best coffee shop experience I've ever had. The baristas are friendly and the atmosphere is perfect for working."</p>
+            <p class="testimonial-text">
+              "Best coffee shop experience I've ever had. The baristas are
+              friendly and the atmosphere is perfect for working."
+            </p>
             <div class="testimonial-author">
               <h4>John</h4>
             </div>
@@ -283,7 +183,10 @@
             <div class="testimonial-quote">
               <i class="fa-solid fa-quote-left"></i>
             </div>
-            <p class="testimonial-text">"I order from here every morning. The quality is always consistent and the delivery service is incredibly reliable."</p>
+            <p class="testimonial-text">
+              "I order from here every morning. The quality is always consistent
+              and the delivery service is incredibly reliable."
+            </p>
             <div class="testimonial-author">
               <h4>Azura</h4>
             </div>
@@ -358,5 +261,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/home.js" type="module" defer></script>
+    <script src="./js/navbar.js" type="module"></script>
   </body>
 </html>

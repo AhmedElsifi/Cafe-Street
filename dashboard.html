@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,14 +35,11 @@
           <li class="nav-link underline-effect">
             <a href="./about.html">About us</a>
           </li>
-          <li class="nav-link underline-effect">
-            <a href="./contact.html">Contact Us</a>
-          </li>
         </ul>
       </nav>
       <div class="controls">
-        <div class="greeting">
-          <p>Hi <span>Ahmed Elsifi</span></p>
+        <div id="auth-controls" class="greeting">
+          <a href="./login.html" class="login-btn">Login</a>
         </div>
         <div class="cart">
           <a href="./cart.html" class="underline-effect"
@@ -68,7 +65,7 @@
               <i class="fa-solid fa-box"></i>
             </div>
             <div class="stat-info">
-              <h3>12</h3>
+              <h3 id="total-products">0</h3>
               <p>Total Products</p>
             </div>
           </div>
@@ -77,7 +74,7 @@
               <i class="fa-solid fa-users"></i>
             </div>
             <div class="stat-info">
-              <h3>248</h3>
+              <h3 id="total-users">0</h3>
               <p>Total Users</p>
             </div>
           </div>
@@ -86,7 +83,7 @@
               <i class="fa-solid fa-shopping-bag"></i>
             </div>
             <div class="stat-info">
-              <h3>1,024</h3>
+              <h3 id="total-orders">0</h3>
               <p>Total Orders</p>
             </div>
           </div>
@@ -96,7 +93,7 @@
       <section class="dashboard-section">
         <div class="section-header">
           <h2>Product <span>management</span></h2>
-          <button class="add-btn">
+          <button id="add-product-btn" class="add-btn">
             <i class="fa-solid fa-plus"></i>
             Add Product
           </button>
@@ -104,7 +101,11 @@
         <div class="section-controls">
           <div class="search-box">
             <i class="fa-solid fa-search"></i>
-            <input type="text" placeholder="Search products..." />
+            <input
+              id="product-search"
+              type="text"
+              placeholder="Search products..."
+            />
           </div>
         </div>
         <div class="table-container">
@@ -118,103 +119,7 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/products/Cappuccino Supreme.png"
-                    alt="Cappuccino Supreme"
-                  />
-                </td>
-                <td>Cappuccino Supreme</td>
-                <td><span class="category-tag hot">Hot Coffee</span></td>
-                <td>$4.99</td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/products/Caramel Macchiato.png"
-                    alt="Caramel Macchiato"
-                  />
-                </td>
-                <td>Caramel Macchiato</td>
-                <td><span class="category-tag hot">Hot Coffee</span></td>
-                <td>$5.49</td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/products/Espresso Doppio.png"
-                    alt="Espresso Doppio"
-                  />
-                </td>
-                <td>Espresso Doppio</td>
-                <td><span class="category-tag hot">Hot Coffee</span></td>
-                <td>$3.99</td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/products/Nitro Cold Brew.png"
-                    alt="Nitro Cold Brew"
-                  />
-                </td>
-                <td>Nitro Cold Brew</td>
-                <td><span class="category-tag cold">Cold Coffee</span></td>
-                <td>$5.49</td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/products/Waffle Ice Cream.png"
-                    alt="Waffle Ice Cream"
-                  />
-                </td>
-                <td>Waffle Ice Cream</td>
-                <td><span class="category-tag food">Food</span></td>
-                <td>$7.49</td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="products-table-body"></tbody>
           </table>
         </div>
       </section>
@@ -222,7 +127,7 @@
       <section class="dashboard-section">
         <div class="section-header">
           <h2>User <span>management</span></h2>
-          <button class="add-btn">
+          <button id="add-user-btn" class="add-btn">
             <i class="fa-solid fa-plus"></i>
             Add User
           </button>
@@ -230,7 +135,7 @@
         <div class="section-controls">
           <div class="search-box">
             <i class="fa-solid fa-search"></i>
-            <input type="text" placeholder="Search users..." />
+            <input id="user-search" type="text" placeholder="Search users..." />
           </div>
         </div>
         <div class="table-container">
@@ -244,98 +149,35 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="users-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-header">
+          <h2>Order <span>management</span></h2>
+        </div>
+        <div class="section-controls">
+          <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input id="order-search" type="text" placeholder="Search orders..." />
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="dashboard-table">
+            <thead>
               <tr>
-                <td>
-                  <div class="user-avatar">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </td>
-                <td>Ahmed Elsifi</td>
-                <td>ahmed@cafestreet.com</td>
-                <td><span class="role-tag admin">Admin</span></td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Actions</th>
               </tr>
-              <tr>
-                <td>
-                  <div class="user-avatar">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </td>
-                <td>Sara Hassan</td>
-                <td>sara@cafestreet.com</td>
-                <td><span class="role-tag manager">Manager</span></td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-avatar">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </td>
-                <td>Omar Khalid</td>
-                <td>omar@cafestreet.com</td>
-                <td><span class="role-tag barista">Barista</span></td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-avatar">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </td>
-                <td>Naura Ali</td>
-                <td>naura@cafestreet.com</td>
-                <td><span class="role-tag customer">Customer</span></td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-avatar">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </td>
-                <td>John Smith</td>
-                <td>john@cafestreet.com</td>
-                <td><span class="role-tag customer">Customer</span></td>
-                <td class="actions">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            </thead>
+            <tbody id="orders-table-body"></tbody>
           </table>
         </div>
       </section>
@@ -387,9 +229,7 @@
 
         <div class="footer-newsletter">
           <h3>Newsletter</h3>
-          <p>
-            Get brew guides, secret bean drops, and 15% off your first bag.
-          </p>
+          <p>Get brew guides, secret bean drops, and 15% off your first bag.</p>
           <form class="newsletter-form">
             <input type="email" placeholder="Your email address" />
             <button type="submit">Join</button>
@@ -399,8 +239,8 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for
-          productivity and mood.
+          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for productivity
+          and mood.
         </p>
         <div class="footer-legal">
           <a href="#">Privacy Policy</a>
@@ -409,5 +249,81 @@
         </div>
       </div>
     </footer>
+
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Add Product</h2>
+          <button class="close-btn">&times;</button>
+        </div>
+        <form id="product-form">
+          <input type="hidden" id="product-id" />
+          <div class="form-group">
+            <label for="product-name">Name</label>
+            <input type="text" id="product-name" required />
+          </div>
+          <div class="form-group">
+            <label for="product-category">Category</label>
+            <select id="product-category" required>
+              <option value="hot">Hot Coffee</option>
+              <option value="cold">Cold Coffee</option>
+              <option value="food">Food</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product-price">Price</label>
+            <input type="number" id="product-price" step="0.01" required />
+          </div>
+          <div class="form-group">
+            <label for="product-description">Description</label>
+            <textarea id="product-description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="product-stock">Stock</label>
+            <input type="number" id="product-stock" required />
+          </div>
+          <div class="form-group">
+            <label for="product-image">Image Path</label>
+            <input type="text" id="product-image" required />
+          </div>
+          <button type="submit" class="submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="user-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="user-modal-title">Add User</h2>
+          <button class="close-btn user-close-btn">&times;</button>
+        </div>
+        <form id="user-form">
+          <input type="hidden" id="user-id" />
+          <div class="form-group">
+            <label for="user-name">Name</label>
+            <input type="text" id="user-name" required />
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email</label>
+            <input type="email" id="user-email" required />
+          </div>
+          <div class="form-group">
+            <label for="user-password">Password</label>
+            <input type="password" id="user-password" required />
+          </div>
+          <div class="form-group">
+            <label for="user-role">Role</label>
+            <select id="user-role" required>
+              <option value="admin">Admin</option>
+              <option value="customer">Customer</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./js/dashboard.js" defer></script>
+    <script type="module" src="./js/navbar.js"></script>
   </body>
 </html>

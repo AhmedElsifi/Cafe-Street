@@ -126,7 +126,7 @@ main img {
   background-color: rgb(251, 233, 215, 0.5);
 }
 
-.carousel-products {
+#carousel-products {
   width: 1137px;
   overflow: hidden;
   display: flex;

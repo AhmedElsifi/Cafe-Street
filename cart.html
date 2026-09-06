@@ -35,14 +35,12 @@
           <li class="nav-link underline-effect">
             <a href="./about.html">About us</a>
           </li>
-          <li class="nav-link underline-effect">
-            <a href="./contact.html">Contact Us</a>
-          </li>
+
         </ul>
       </nav>
       <div class="controls">
-        <div class="greeting">
-          <p>Hi <span>Ahmed Elsifi</span></p>
+        <div id="auth-controls" class="greeting">
+          <a href="./login.html" class="login-btn">Login</a>
         </div>
         <div class="cart">
           <a href="./cart.html" class="underline-effect"
@@ -62,114 +60,26 @@
       </section>
 
       <section class="cart-section">
-        <div class="cart-items">
-          <div class="cart-item">
-            <div class="cart-item-image">
-              <img
-                src="./assets/images/products/Cappuccino Supreme.png"
-                alt="Cappuccino Supreme"
-              />
-            </div>
-            <div class="cart-item-info">
-              <h3>Cappuccino Supreme</h3>
-              <p class="cart-item-price">$4.99</p>
-            </div>
-            <div class="cart-item-quantity">
-              <button class="qty-btn minus">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <span class="qty-value">2</span>
-              <button class="qty-btn plus">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-            <div class="cart-item-total">
-              <p>$9.98</p>
-            </div>
-            <button class="cart-item-remove">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-
-          <div class="cart-item">
-            <div class="cart-item-image">
-              <img
-                src="./assets/images/products/Caramel Macchiato.png"
-                alt="Caramel Macchiato"
-              />
-            </div>
-            <div class="cart-item-info">
-              <h3>Caramel Macchiato</h3>
-              <p class="cart-item-price">$5.49</p>
-            </div>
-            <div class="cart-item-quantity">
-              <button class="qty-btn minus">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <span class="qty-value">1</span>
-              <button class="qty-btn plus">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-            <div class="cart-item-total">
-              <p>$5.49</p>
-            </div>
-            <button class="cart-item-remove">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-
-          <div class="cart-item">
-            <div class="cart-item-image">
-              <img
-                src="./assets/images/products/Waffle Ice Cream.png"
-                alt="Waffle Ice Cream"
-              />
-            </div>
-            <div class="cart-item-info">
-              <h3>Waffle Ice Cream</h3>
-              <p class="cart-item-price">$7.49</p>
-            </div>
-            <div class="cart-item-quantity">
-              <button class="qty-btn minus">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <span class="qty-value">1</span>
-              <button class="qty-btn plus">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-            <div class="cart-item-total">
-              <p>$7.49</p>
-            </div>
-            <button class="cart-item-remove">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        </div>
+        <div id="cart-items" class="cart-items"></div>
 
         <div class="cart-summary">
           <h2>Order Summary</h2>
           <div class="cart-summary-row">
-            <span>Subtotal (4 items)</span>
-            <span>$22.96</span>
+            <span id="subtotal-text">Subtotal (0 items)</span>
+            <span id="subtotal-value">$0.00</span>
           </div>
           <div class="cart-summary-row">
             <span>Shipping</span>
             <span>$2.99</span>
           </div>
-          <div class="cart-summary-row discount">
-            <span>Discount</span>
-            <span>-$3.00</span>
-          </div>
           <hr />
           <div class="cart-summary-row total">
             <span>Total</span>
-            <span>$22.95</span>
+            <span id="total-value">$2.99</span>
           </div>
-          <button class="checkout-btn">
-            Proceed to Checkout
-            <i class="fa-solid fa-arrow-right"></i>
+          <button id="create-order-btn" class="checkout-btn">
+            Create Order
+            <i class="fa-solid fa-check"></i>
           </button>
           <a href="./products.html" class="continue-shopping">
             <i class="fa-solid fa-arrow-left"></i>
@@ -247,5 +157,8 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="./js/cart.js"></script>
+    <script type="module" src="./js/navbar.js"></script>
   </body>
 </html>

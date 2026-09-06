@@ -17,7 +17,38 @@
     <title>Login to Cafe Street</title>
   </head>
   <body>
-    <!-- nav -->
+    <header>
+      <a href="./index.html">
+        <img
+          src="./assets/images/logo/Logo.svg"
+          alt="an image showing the website logo"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li class="nav-link underline-effect">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./products.html">Our Products</a>
+          </li>
+          <li class="nav-link underline-effect">
+            <a href="./about.html">About us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <div id="auth-controls" class="greeting">
+          <a href="./login.html" class="login-btn">Login</a>
+        </div>
+        <div class="cart">
+          <a href="./cart.html" class="underline-effect"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <span>0</span>
+        </div>
+      </div>
+    </header>
 
     <main>
       <aside class="hero">
@@ -60,7 +91,8 @@
           Enter your credentials to access your saved drinks, orders, and
           rewards.
         </h3>
-        <form>
+        <p id="login-error" class="error-message"></p>
+        <form id="login-form">
           <div>
             <label for="email">Email Address</label>
             <div class="input">
@@ -93,6 +125,74 @@
       </section>
     </main>
 
-    <!-- footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./assets/images/logo/Logo white.svg" alt="" />
+          <p>
+            Enjoy your coffee before your activity - boosting productivity and
+            mood worldwide.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact & Hours</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>7:00 AM - 9:00 PM daily</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@cafestreet.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (555) 234-CAFE</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-pin"></i>
+              <span>42 Espresso Way, Roast Quarter</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get brew guides, secret bean drops, and 15% off your first bag.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for productivity
+          and mood.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/login.js"></script>
+    <script type="module" src="./js/navbar.js"></script>
   </body>
 </html>

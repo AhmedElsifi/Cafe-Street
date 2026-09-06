@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,14 +35,12 @@
           <li class="nav-link underline-effect">
             <a href="./about.html">About us</a>
           </li>
-          <li class="nav-link underline-effect">
-            <a href="./contact.html">Contact Us</a>
-          </li>
+
         </ul>
       </nav>
       <div class="controls">
-        <div class="greeting">
-          <p>Hi <span>Ahmed Elsifi</span></p>
+        <div id="auth-controls" class="greeting">
+          <a href="./login.html" class="login-btn">Login</a>
         </div>
         <div class="cart">
           <a href="./cart.html" class="underline-effect"
@@ -64,23 +62,19 @@
       <section class="products-controls">
         <div class="products-search">
           <i class="fa-solid fa-search"></i>
-          <input type="text" placeholder="Search products..." />
+          <input type="text" id="search-input" placeholder="Search products..." />
         </div>
         <div class="products-filters">
           <div class="filter-group">
             <label>Category:</label>
-            <select>
+            <select id="category-selector">
               <option value="all">All</option>
-              <option value="hot">Hot Coffee</option>
-              <option value="cold">Cold Coffee</option>
-              <option value="food">Food</option>
             </select>
           </div>
           <div class="filter-group">
             <label>Sort by:</label>
-            <select>
-              <option value="name-asc">Name (A-Z)</option>
-              <option value="name-desc">Name (Z-A)</option>
+            <select id="sort-selector">
+              <option value="default">Default</option>
               <option value="price-asc">Price (Low to High)</option>
               <option value="price-desc">Price (High to Low)</option>
             </select>
@@ -88,295 +82,7 @@
         </div>
       </section>
 
-      <section class="products-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Cappuccino Supreme.png"
-              alt="Cappuccino Supreme"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Cappuccino Supreme</h3>
-            <p class="product-description">
-              A rich and creamy cappuccino with a perfect balance of espresso
-              and steamed milk.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$4.99</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Caramel Macchiato.png"
-              alt="Caramel Macchiato"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Caramel Macchiato</h3>
-            <p class="product-description">
-              Smooth espresso layered with vanilla-flavored caramel and creamy
-              steamed milk.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$5.49</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Espresso Doppio.png"
-              alt="Espresso Doppio"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Espresso Doppio</h3>
-            <p class="product-description">
-              A bold double shot of our signature espresso blend for the
-              purist.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$3.99</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Hazelnut Latte.png"
-              alt="Hazelnut Latte"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Hazelnut Latte</h3>
-            <p class="product-description">
-              Velvety latte infused with warm hazelnut flavor for a cozy
-              treat.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$5.29</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Cold</p>
-            <img
-              src="assets/images/products/Nitro Cold Brew.png"
-              alt="Nitro Cold Brew"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Nitro Cold Brew</h3>
-            <p class="product-description">
-              Smooth cold brew infused with nitrogen for a rich, creamy
-              texture.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Cold Coffee</span>
-              <span class="product-price">$5.49</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Cold</p>
-            <img
-              src="assets/images/products/Waffle Ice Cream.png"
-              alt="Waffle Ice Cream"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Waffle Ice Cream</h3>
-            <p class="product-description">
-              Crispy waffle cone filled with premium ice cream and topped with
-              caramel drizzle.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Food</span>
-              <span class="product-price">$7.49</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Hot Spiced Milk.png"
-              alt="Hot Spiced Milk"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Hot Spiced Milk</h3>
-            <p class="product-description">
-              Warm milk infused with aromatic spices like cinnamon, cardamom,
-              and nutmeg.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$4.49</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Maccacino Delight.png"
-              alt="Maccacino Delight"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Maccacino Delight</h3>
-            <p class="product-description">
-              A harmonious blend of espresso, steamed milk, and a touch of
-              chocolate.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$5.99</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Matcha Green Latte.png"
-              alt="Matcha Green Latte"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Matcha Green Latte</h3>
-            <p class="product-description">
-              Premium matcha green tea blended with creamy steamed milk for a
-              healthy boost.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$5.79</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Cold</p>
-            <img
-              src="assets/images/products/Coffe Ice Cream Float.png"
-              alt="Coffee Ice Cream Float"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Coffee Ice Cream Float</h3>
-            <p class="product-description">
-              Chilled coffee poured over vanilla ice cream for the ultimate
-              indulgence.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Cold Coffee</span>
-              <span class="product-price">$6.49</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Hot</p>
-            <img
-              src="assets/images/products/Vanilla Latte.png"
-              alt="Vanilla Latte"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Vanilla Latte</h3>
-            <p class="product-description">
-              Classic latte enhanced with sweet vanilla flavor for a smooth
-              finish.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Hot Coffee</span>
-              <span class="product-price">$5.29</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <p class="product-tag">Food</p>
-            <img
-              src="assets/images/products/Artisan Sandwich.png"
-              alt="Artisan Sandwich"
-            />
-            <div class="product-add-to-cart-btn">
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Artisan Sandwich</h3>
-            <p class="product-description">
-              Freshly baked bread filled with premium ingredients and
-              handcrafted with care.
-            </p>
-            <div class="product-meta">
-              <span class="product-category">Food</span>
-              <span class="product-price">$8.99</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="products-container" class="products-grid"></section>
     </div>
 
     <footer>
@@ -425,9 +131,7 @@
 
         <div class="footer-newsletter">
           <h3>Newsletter</h3>
-          <p>
-            Get brew guides, secret bean drops, and 15% off your first bag.
-          </p>
+          <p>Get brew guides, secret bean drops, and 15% off your first bag.</p>
           <form class="newsletter-form">
             <input type="email" placeholder="Your email address" />
             <button type="submit">Join</button>
@@ -437,8 +141,8 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for
-          productivity and mood.
+          &copy; 2024 Cafe Street Coffee Roasters. Handcrafted for productivity
+          and mood.
         </p>
         <div class="footer-legal">
           <a href="#">Privacy Policy</a>
@@ -447,5 +151,8 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="./js/products.js" defer></script>
+    <script type="module" src="./js/navbar.js"></script>
   </body>
 </html>

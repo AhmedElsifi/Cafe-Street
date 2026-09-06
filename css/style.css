@@ -130,6 +130,12 @@ nav > ul {
   justify-content: center;
 }
 
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .greeting p {
   font-size: 14px;
   font-weight: 500;
@@ -137,6 +143,44 @@ nav > ul {
 
 .greeting span {
   color: #e37f30;
+}
+
+.login-btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c1810;
+  position: relative;
+}
+
+.login-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e37f30;
+  transition: width 0.3s ease;
+}
+
+.login-btn:hover::after {
+  width: 100%;
+}
+
+.logout-btn {
+  padding: 8px 20px;
+  background-color: #ef4444;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
 }
 
 .cart {
@@ -264,7 +308,7 @@ footer {
 }
 
 .newsletter-form input {
-  flex: 1;
+  width: 100%;
   padding: 12px 16px;
   border: none;
   border-radius: 4px 0 0 4px;
