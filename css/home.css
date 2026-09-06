@@ -124,18 +124,17 @@ main img {
   border-radius: 32px;
   border: #f2dac4 solid 1px;
   background-color: rgb(251, 233, 215, 0.5);
+  overflow: hidden;
 }
 
 #carousel-products {
-  width: 1137px;
-  overflow: hidden;
   display: flex;
   gap: 18px;
-  align-items: center;
+  transition: transform 0.5s ease;
 }
 
 .carousel-product {
-  width: 367px;
+  min-width: calc((100% - 36px) / 3);
   height: 349px;
   padding: 16px;
   background-color: #ffffff;
@@ -206,6 +205,76 @@ main img {
 .carousel-product-add-to-cart-btn:hover {
   color: #e37f30;
   background-color: #ffffff;
+}
+
+.categories {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.categories-header {
+  margin-bottom: 48px;
+}
+
+.categories-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+.categories-header h2 span {
+  text-decoration: underline;
+  text-decoration-color: #e37f30;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+}
+
+.categories-header p {
+  font-size: 18px;
+  color: #7e7d7a;
+  margin-top: 12px;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  width: 200px;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 14px 0px rgb(44, 24, 16, 0.08);
+  text-align: center;
+  transition-duration: 0.3s;
+  border: 2px solid transparent;
+}
+
+.category-card:hover {
+  border-color: #e37f30;
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  background-color: rgba(227, 127, 48, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #e37f30;
+}
+
+.category-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c1810;
 }
 
 .how-it-works {

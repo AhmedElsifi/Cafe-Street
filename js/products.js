@@ -113,6 +113,10 @@ function applyFilters() {
     filteredProducts = getProductsAscendingly(filteredProducts);
   } else if (selectedSort === "price-desc") {
     filteredProducts = getProductsDescendingly(filteredProducts);
+  } else if (selectedSort === "name-asc") {
+    filteredProducts = [...filteredProducts].sort((a, b) => a.name.localeCompare(b.name));
+  } else if (selectedSort === "name-desc") {
+    filteredProducts = [...filteredProducts].sort((a, b) => b.name.localeCompare(a.name));
   }
 
   renderProducts(filteredProducts);
